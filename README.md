@@ -4,6 +4,12 @@ Force the use of i2p from Debian's repositories instead of from the project
 repo's or the PPA. It's a work in progress, I'm going to fix the linter errors
 shortly.
 
+[Because of this](https://lintian.debian.org/tags/package-installs-apt-preferences.html),
+you should be informed of what this package does before deciding to use it.
+Although it ignores this recommendation in practice, it exists only to represent
+the likely wishes of the local administrator and won't be installed
+involuntarily.
+
 ## What simple thing does it fix?
 
 Existing i2p users who are using the i2p Debian repo or the i2p PPA occasionally
