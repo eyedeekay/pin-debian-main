@@ -1,0 +1,10 @@
+Package: pin-debian-main
+Version: 0.1
+Architecture: all
+Maintainer: lair repo key <hankhill19580@gmail.com>
+Installed-Size: 15
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

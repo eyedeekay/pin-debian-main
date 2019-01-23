@@ -1,0 +1,19 @@
+Package: i2p
+Pin: release o=Debian
+Pin-Priority: 500
+
+Package: i2pd
+Pin: release o=Debian
+Pin-Priority: 500
+
+Package: i2p
+Pin: release o=I2P
+Pin-Priority: -10
+
+Package: i2p
+Pin: release o=LP-PPA-i2p-maintainers-i2p
+Pin-Priority: -10
+
+Package: i2pd
+Pin: release o=LP-PPA-purplei2p-i2p
+Pin-Priority: -10
