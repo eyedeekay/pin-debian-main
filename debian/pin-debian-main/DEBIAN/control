@@ -1,10 +1,11 @@
 Package: pin-debian-main
 Version: 0.1
 Architecture: all
-Maintainer: lair repo key <hankhill19580@gmail.com>
+Maintainer: eyedeekay <hankhill19580@gmail.com>
 Installed-Size: 15
-Section: unknown
+Section: net
 Priority: optional
-Homepage: <insert the upstream URL, if relevant>
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Homepage: https://github.com/eyedeekay/pin-debian-main
+Description: Forces the installation of i2p packages from Debian.
+ Stops apt from trying to fetch the i2p package from the PPA and Project-hosted
+ sources when they conflict.

@@ -25,7 +25,7 @@ manpage.1: manpage.sgml
        allowed: see man(7), man(1). -->
   <!ENTITY dhsection   "<manvolnum>SECTION</manvolnum>">
   <!ENTITY dhemail     "<email>hankhill19580@gmail.com</email>">
-  <!ENTITY dhusername  "lair repo key">
+  <!ENTITY dhusername  "eyedeekay">
   <!ENTITY dhucpackage "<refentrytitle>Pin-debian-main</refentrytitle>">
   <!ENTITY dhpackage   "pin-debian-main">
 

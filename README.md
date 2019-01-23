@@ -47,4 +47,6 @@ Which contains:
         Pin-Priority: -10
 
 This causes the system to blacklist i2p and i2pd from the project sources and
-force them to replaced with the ones from the distribution.
+force them to replaced with the ones from the distribution. **Also it means**
+**that it will *never* be eligible for upstreaming to Debian, but that's OK**
+**because unless you have the PPA installed, you don't need it.**

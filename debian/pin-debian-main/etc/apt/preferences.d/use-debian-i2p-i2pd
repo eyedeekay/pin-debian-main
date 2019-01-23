@@ -7,6 +7,14 @@ Pin: release o=Debian
 Pin-Priority: 500
 
 Package: i2p
+Pin: release o=Ubuntu
+Pin-Priority: 500
+
+Package: i2pd
+Pin: release o=Ubuntu
+Pin-Priority: 500
+
+Package: i2p
 Pin: release o=I2P
 Pin-Priority: -10
 
