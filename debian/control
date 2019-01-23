@@ -14,3 +14,7 @@ Depends: ${misc:Depends}
 Description: Forces the installation of i2p packages from Debian.
  Stops apt from trying to fetch the i2p package from the PPA and Project-hosted
  sources when they conflict.
+ This causes the system to blacklist i2p and i2pd from the project sources and
+ force them to replaced with the ones from the distribution. Also it means that
+ it will *never* be eligible for upstreaming to Debian, but that's OK  because
+ unless you have the PPA installed, you don't need it.

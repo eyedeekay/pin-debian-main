@@ -1,3 +1,12 @@
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
    dh_md5sums
    dh_builddeb
 dpkg-deb: building package 'pin-debian-main' in '../pin-debian-main_0.1_all.deb'.
@@ -7,14 +16,5 @@ dpkg-genchanges: info: including full source code in upload
  dpkg-source --after-build .
 dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
 Now running lintian pin-debian-main_0.1_amd64.changes ...
-E: pin-debian-main source: readme-source-is-dh_make-template
-W: pin-debian-main source: dh-make-template-in-source debian/manpage.1.ex
-W: pin-debian-main source: dh-make-template-in-source debian/manpage.sgml.ex
-W: pin-debian-main source: dh-make-template-in-source debian/manpage.xml.ex
-W: pin-debian-main source: dh-make-template-in-source debian/menu.ex
-W: pin-debian-main source: dh-make-template-in-source debian/pin-debian-main.cron.d.ex
-W: pin-debian-main source: dh-make-template-in-source debian/pin-debian-main.doc-base.EX
-E: pin-debian-main source: debian-rules-is-dh_make-template
-W: pin-debian-main: readme-debian-contains-debmake-template
 E: pin-debian-main: package-installs-apt-preferences etc/apt/preferences.d/use-debian-i2p-i2pd
 Finished running lintian.
