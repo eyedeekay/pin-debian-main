@@ -6,11 +6,13 @@ RUN apt-key --keyring /etc/apt/trusted.gpg.d/i2p.gpg adv --keyserver hkp://keyse
 RUN echo "deb http://ppa.launchpad.net/purplei2p/i2pd/ubuntu xenial main" | tee /etc/apt/sources.list.d/i2pd.list
 RUN echo "deb-src http://ppa.launchpad.net/purplei2p/i2pd/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/i2pd.list
 RUN apt-key --keyring /etc/apt/trusted.gpg.d/i2pd.gpg adv --keyserver hkp://keyserver.ubuntu.com --recv-keys A0592679C89831BBC7E5D822625964081B0340BA
+RUN echo "deb http://deb.whonix.org stretch main" | tee /etc/apt/sources.list.d/whonix.list
+RUN apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
 RUN apt-get update
-RUN apt-get install -y i2p*
+RUN apt-get install -y i2p* make genmkfile
 RUN sed -i 's|xenial|bionic|g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get dist-upgrade -y || true
+RUN apt-get install -y i2p || true
 COPY . /home/pin-debian-main
 WORKDIR /home/pin-debian-main
 RUN make install
