@@ -49,4 +49,9 @@ Which contains:
 This causes the system to blacklist i2p and i2pd from the project sources and
 force them to replaced with the ones from the distribution. **Also it means**
 **that it will *never* be eligible for upstreaming to Debian, but that's OK**
-**because unless you have the PPA installed, you don't need it.**
+**because unless you have the PPA installed, you don't need it.** See:
+
+        E: pin-debian-main: package-installs-apt-preferences etc/apt/preferences.d/use-debian-i2p-i2pd
+        Finished running lintian.
+
+[Other existing lintian errors](lintian.errors.txt)
