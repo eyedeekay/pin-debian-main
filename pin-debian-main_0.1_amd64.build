@@ -1,0 +1,613 @@
+ dpkg-buildpackage -rfakeroot-ng -us -uc -ui
+dpkg-buildpackage: info: source package pin-debian-main
+dpkg-buildpackage: info: source version 0.1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by eyedeekay <hankhill19580@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot-ng debian/rules clean
+dh clean
+   dh_auto_clean
+	make -j2 distclean
+make[1]: Entering directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+/usr/share/genmkfile/make-helper.bsh distclean
++ '[' -f /usr/lib/pre.bsh ']'
++ source /usr/lib/pre.bsh
+++ '[' '!' -d /tmp/prepost ']'
++++ mktemp --directory --tmpdir=/tmp/prepost
+++ TEMP_DIR=/tmp/prepost/tmp.esB2VLDxmo
+++ '[' -o xtrace ']'
+++ XTRACE=0
+++ set -o errtrace
+++ colors
+++ '[' screen-256color = '' ']'
+++ [[ -t 2 ]]
+++ :
+++ '[' 0 = 0 ']'
+++ true 'INFO: Setting DEBDEBUG to 1, because xtrace (-x) is set.'
+++ DEBDEBUG=1
+++ '[' 1 = 1 ']'
+++ set -x
++++ type -t errorhandlergeneral
+++ '[' '' = function ']'
+++ trap error_handler_pre ERR
+++ bash -n /usr/lib/pre.bsh
+++ bash -n /usr/share/genmkfile/make-helper.bsh
+++ own_filename=make-helper.bsh
+++ unset skip_script
++ set -e
++ set -o pipefail
++ make_function_run make_init
++ local function_name function_name_return_code
++ function_name=make_init
++ shift
++ type -t make_init_hook_pre
++ true
++ make_init
++ cd /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_init_hook_post
++ make_function_run make_source_overrides_file distclean
++ local function_name function_name_return_code
++ function_name=make_source_overrides_file
++ shift
++ type -t make_source_overrides_file_hook_pre
++ true
++ make_source_overrides_file distclean
++ '[' -x ./make-helper-overrides.bsh ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_file_hook_post
++ make_function_run make_source_overrides_folder distclean
++ local function_name function_name_return_code
++ function_name=make_source_overrides_folder
++ shift
++ type -t make_source_overrides_folder_hook_pre
++ true
++ make_source_overrides_folder distclean
++ '[' -d ./make-helper-overrides.d ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_folder_hook_post
++ make_function_run make_parse_cmd distclean
++ local function_name function_name_return_code
++ function_name=make_parse_cmd
++ shift
++ type -t make_parse_cmd_hook_pre
++ true
++ make_parse_cmd distclean
++ local matched=false
++ local deb
++ :
++ case $1 in
++ matched=true
++ make_function_run make_clean
++ local function_name function_name_return_code
++ function_name=make_clean
++ shift
++ type -t make_clean_hook_pre
++ true
++ make_clean
++ '[' -f /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/Makefile_orig ']'
++ make_function_run make_deb-clean
++ local function_name function_name_return_code
++ function_name=make_deb-clean
++ shift
++ type -t make_deb-clean_hook_pre
++ true
++ make_deb-clean
++ make_function_run make_get_variables
++ local function_name function_name_return_code
++ function_name=make_get_variables
++ shift
++ type -t make_get_variables_hook_pre
++ true
++ make_get_variables
++ LC_ALL=C.UTF-8
++ TZ=UTC
++ export LC_ALL TZ
++ package_build_result_temp_folder=/home/user/whonix_binary/packages_temp
++ package_build_pkg_src_temp_folder=/home/user/whonix_binary/packages_temp
++ local temp dpkg_line
++ command -v dpkg-parsechangelog
++ make_debian_control_file_relative_path=debian/control
+++ realpath debian/control
++ make_debian_control_file_absolute_path=/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/control
++ test -f /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/control
++ make_debian_changelog_file_relative_path=debian/changelog
+++ realpath debian/changelog
++ make_debian_changelog_file_absolute_path=/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/changelog
++ test -f /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/changelog
+++ perl -ne 'next if /^#/; $p=(s/^Build-Depends:\s*/ / or (/^ / and $p)); s/,|\n|\([^)]+\)//mg; print if $p'
++ make_deb_build_dependencies=' debhelper '
+++ make_dependencies_filter_helper ' debhelper '
+++ temp=' debhelper '
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' debhelper '
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' debhelper '
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' debhelper '
+++ echo ' debhelper '
++ make_deb_build_dependencies=' debhelper '
+++ perl -ne 'next if /^#/; $p=(s/^Depends:\s*/ / or (/^ / and $p)); s/,|\n|\([^)]+\)//mg; print if $p'
++ make_deb_runtime_dependencies=' ${misc:Depends}'
+++ make_dependencies_filter_helper ' ${misc:Depends}'
+++ temp=' ${misc:Depends}'
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' '
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' '
+++ for to_remove in '${misc:Depends}' '${python:Depends}' '|'
+++ temp=' '
+++ echo ' '
++ make_deb_runtime_dependencies=' '
++ read -r -d '
+' dpkg_line
+++ dpkg-parsechangelog
++ read -r first second _
++ first=source:
++ '[' source: = version: ']'
++ read -r -d '
+' dpkg_line
++ read -r first second _
++ first=version:
++ '[' version: = version: ']'
++ make_changelog_version=0.1
++ make_pkg_revision=0.1
++ temp=0.1
++ make_pkg_version=0.1
++ make_epoch=0.1
++ break
++ make_pkg_version_with_revision=0.1-0.1
++ '[' 0.1 = '' ']'
+++ dpkg --print-architecture
++ dpkg_print_architecture=amd64
++ local architecture_keyword architecture_setting architecture_grep
++ '[' '' = '' ']'
+++ cat /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/control
+++ grep Architecture:
++ architecture_grep='Architecture: all'
++ read -r architecture_keyword architecture_setting _
++ '[' all = '' ']'
++ '[' all = all ']'
++ architecture=all
++ local grep_line a package
+++ grep Source: /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/control
++ grep_line='Source: pin-debian-main'
++ read -r a package _
++ make_source_package_name=pin-debian-main
++ make_package_list=pin-debian-main
++ make_package_debs_files_list=
++ read -r -d '
+' grep_line
+++ grep Package: /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/control
++ read -r a package _
++ temp=pin-debian-main_0.1-0.1_all.deb
++ '[' '' = true ']'
++ temp=../pin-debian-main_0.1-0.1_all.deb
++ make_package_debs_files_list=' ../pin-debian-main_0.1-0.1_all.deb'
++ '[' pin-debian-main = pin-debian-main ']'
++ continue
++ read -r -d '
+' grep_line
++ true 'make_package_list: pin-debian-main'
++ true 'make_package_debs_files_list:  ../pin-debian-main_0.1-0.1_all.deb'
++ make_main_deb_file_name=pin-debian-main_0.1-0.1_all.deb
++ make_main_deb_file=../pin-debian-main_0.1-0.1_all.deb
++ make_main_dsc_file_name=pin-debian-main_0.1-0.1.dsc
++ '[' '' = true ']'
++ make_main_dsc_file=../pin-debian-main_0.1-0.1.dsc
++ make_main_changes_file=../pin-debian-main_0.1-0.1_amd64.changes
++ make_debian_tarball_file_name=pin-debian-main_0.1-0.1.debian.tar.xz
++ make_debian_tarball=/pin-debian-main_0.1-0.1.debian.tar.xz
++ '[' '' = false ']'
++ make_debian_tarball_file_name=pin-debian-main_0.1-0.1.debian.tar.xz
++ make_debian_tarball=/pin-debian-main_0.1-0.1.debian.tar.xz
+++ realpath /pin-debian-main_0.1-0.1.debian.tar.xz
++ make_debian_tarball_absolute_path=/pin-debian-main_0.1-0.1.debian.tar.xz
++ make_upstream_tarball_relative_path_file_name=pin-debian-main_0.1.orig.tar.xz
++ make_upstream_tarball_relative_path=/pin-debian-main_0.1.orig.tar.xz
++ '[' '' = false ']'
++ make_upstream_tarball_relative_path_file_name=pin-debian-main_0.1.orig.tar.xz
++ make_upstream_tarball_relative_path=/pin-debian-main_0.1.orig.tar.xz
+++ realpath /pin-debian-main_0.1.orig.tar.xz
++ make_upstream_tarball_real_path=/pin-debian-main_0.1.orig.tar.xz
++ make_upstream_tarball_source_folder_name=pin-debian-main-0.1
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_get_variables_hook_post
++ '[' -d debian/tmp ']'
++ '[' -d debian/tmp-man ']'
++ '[' -d deb_dist ']'
++ '[' -d debian/.debhelper ']'
++ rm --recursive debian/.debhelper
++ local to_delete package
++ for package in $make_package_list
++ '[' -d debian/pin-debian-main ']'
++ rm --recursive debian/pin-debian-main
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.debhelper.log ']'
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.substvars ']'
++ rm debian/pin-debian-main.substvars
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/files ']'
++ rm debian/files
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.prerm.debhelper ']'
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.preinst.debhelper ']'
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.postinst.debhelper ']'
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/pin-debian-main.postrm.debhelper ']'
++ for to_delete in "debian/$package.debhelper.log" "debian/$package.substvars" "debian/files" "debian/$package.prerm.debhelper" "debian/$package.preinst.debhelper" "debian/$package.postinst.debhelper" "debian/$package.postrm.debhelper" "debian/debhelper-build-stamp"
++ '[' -e debian/debhelper-build-stamp ']'
++ rm debian/debhelper-build-stamp
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_deb-clean_hook_post
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_clean_hook_post
++ exit 0
+make[1]: Leaving directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building pin-debian-main in pin-debian-main_0.1.tar.xz
+dpkg-source: info: building pin-debian-main in pin-debian-main_0.1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   dh_auto_build
+	make -j2 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+/usr/share/genmkfile/make-helper.bsh all 
++ '[' -f /usr/lib/pre.bsh ']'
++ source /usr/lib/pre.bsh
+++ '[' '!' -d /tmp/prepost ']'
++++ mktemp --directory --tmpdir=/tmp/prepost
+++ TEMP_DIR=/tmp/prepost/tmp.F7vOd3YuqY
+++ '[' -o xtrace ']'
+++ XTRACE=0
+++ set -o errtrace
+++ colors
+++ '[' screen-256color = '' ']'
+++ [[ -t 2 ]]
+++ :
+++ '[' 0 = 0 ']'
+++ true 'INFO: Setting DEBDEBUG to 1, because xtrace (-x) is set.'
+++ DEBDEBUG=1
+++ '[' 1 = 1 ']'
+++ set -x
++++ type -t errorhandlergeneral
+++ '[' '' = function ']'
+++ trap error_handler_pre ERR
+++ bash -n /usr/lib/pre.bsh
+++ bash -n /usr/share/genmkfile/make-helper.bsh
+++ own_filename=make-helper.bsh
+++ unset skip_script
++ set -e
++ set -o pipefail
++ make_function_run make_init
++ local function_name function_name_return_code
++ function_name=make_init
++ shift
++ type -t make_init_hook_pre
++ true
++ make_init
++ cd /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_init_hook_post
++ make_function_run make_source_overrides_file all
++ local function_name function_name_return_code
++ function_name=make_source_overrides_file
++ shift
++ type -t make_source_overrides_file_hook_pre
++ true
++ make_source_overrides_file all
++ '[' -x ./make-helper-overrides.bsh ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_file_hook_post
++ make_function_run make_source_overrides_folder all
++ local function_name function_name_return_code
++ function_name=make_source_overrides_folder
++ shift
++ type -t make_source_overrides_folder_hook_pre
++ true
++ make_source_overrides_folder all
++ '[' -d ./make-helper-overrides.d ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_folder_hook_post
++ make_function_run make_parse_cmd all
++ local function_name function_name_return_code
++ function_name=make_parse_cmd
++ shift
++ type -t make_parse_cmd_hook_pre
++ true
++ make_parse_cmd all
++ local matched=false
++ local deb
++ :
++ case $1 in
++ matched=true
++ make_function_run make_all all
++ local function_name function_name_return_code
++ function_name=make_all
++ shift
++ type -t make_all_hook_pre
++ true
++ make_all all
++ '[' -f /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/Makefile_orig ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_all_hook_post
++ exit 0
+make[1]: Leaving directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+   dh_auto_test
+	make -j2 test
+make[1]: Entering directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+/usr/share/genmkfile/make-helper.bsh test 
++ '[' -f /usr/lib/pre.bsh ']'
++ source /usr/lib/pre.bsh
+++ '[' '!' -d /tmp/prepost ']'
++++ mktemp --directory --tmpdir=/tmp/prepost
+++ TEMP_DIR=/tmp/prepost/tmp.JM0b3LtNGC
+++ '[' -o xtrace ']'
+++ XTRACE=0
+++ set -o errtrace
+++ colors
+++ '[' screen-256color = '' ']'
+++ [[ -t 2 ]]
+++ :
+++ '[' 0 = 0 ']'
+++ true 'INFO: Setting DEBDEBUG to 1, because xtrace (-x) is set.'
+++ DEBDEBUG=1
+++ '[' 1 = 1 ']'
+++ set -x
++++ type -t errorhandlergeneral
+++ '[' '' = function ']'
+++ trap error_handler_pre ERR
+++ bash -n /usr/lib/pre.bsh
+++ bash -n /usr/share/genmkfile/make-helper.bsh
+++ own_filename=make-helper.bsh
+++ unset skip_script
++ set -e
++ set -o pipefail
++ make_function_run make_init
++ local function_name function_name_return_code
++ function_name=make_init
++ shift
++ type -t make_init_hook_pre
++ true
++ make_init
++ cd /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_init_hook_post
++ make_function_run make_source_overrides_file test
++ local function_name function_name_return_code
++ function_name=make_source_overrides_file
++ shift
++ type -t make_source_overrides_file_hook_pre
++ true
++ make_source_overrides_file test
++ '[' -x ./make-helper-overrides.bsh ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_file_hook_post
++ make_function_run make_source_overrides_folder test
++ local function_name function_name_return_code
++ function_name=make_source_overrides_folder
++ shift
++ type -t make_source_overrides_folder_hook_pre
++ true
++ make_source_overrides_folder test
++ '[' -d ./make-helper-overrides.d ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_folder_hook_post
++ make_function_run make_parse_cmd test
++ local function_name function_name_return_code
++ function_name=make_parse_cmd
++ shift
++ type -t make_parse_cmd_hook_pre
++ true
++ make_parse_cmd test
++ local matched=false
++ local deb
++ :
++ case $1 in
++ matched=true
++ make_function_run make_test
++ local function_name function_name_return_code
++ function_name=make_test
++ shift
++ type -t make_test_hook_pre
++ true
++ make_test
++ true 'INFO: make_test not implemented'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_test_hook_post
++ exit 0
+make[1]: Leaving directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+   create-stamp debian/debhelper-build-stamp
+ fakeroot-ng debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j2 install DESTDIR=/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/pin-debian-main AM_UPDATE_INFO_DIR=no "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+/usr/share/genmkfile/make-helper.bsh install
++ '[' -f /usr/lib/pre.bsh ']'
++ source /usr/lib/pre.bsh
+++ '[' '!' -d /tmp/prepost ']'
++++ mktemp --directory --tmpdir=/tmp/prepost
+++ TEMP_DIR=/tmp/prepost/tmp.h4YbrPJQMX
+++ '[' -o xtrace ']'
+++ XTRACE=0
+++ set -o errtrace
+++ colors
+++ '[' screen-256color = '' ']'
+++ [[ -t 2 ]]
+++ :
+++ '[' 0 = 0 ']'
+++ true 'INFO: Setting DEBDEBUG to 1, because xtrace (-x) is set.'
+++ DEBDEBUG=1
+++ '[' 1 = 1 ']'
+++ set -x
++++ type -t errorhandlergeneral
+++ '[' '' = function ']'
+++ trap error_handler_pre ERR
+++ bash -n /usr/lib/pre.bsh
+++ bash -n /usr/share/genmkfile/make-helper.bsh
+++ own_filename=make-helper.bsh
+++ unset skip_script
++ set -e
++ set -o pipefail
++ make_function_run make_init
++ local function_name function_name_return_code
++ function_name=make_init
++ shift
++ type -t make_init_hook_pre
++ true
++ make_init
++ cd /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_init_hook_post
++ make_function_run make_source_overrides_file install
++ local function_name function_name_return_code
++ function_name=make_source_overrides_file
++ shift
++ type -t make_source_overrides_file_hook_pre
++ true
++ make_source_overrides_file install
++ '[' -x ./make-helper-overrides.bsh ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_file_hook_post
++ make_function_run make_source_overrides_folder install
++ local function_name function_name_return_code
++ function_name=make_source_overrides_folder
++ shift
++ type -t make_source_overrides_folder_hook_pre
++ true
++ make_source_overrides_folder install
++ '[' -d ./make-helper-overrides.d ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_source_overrides_folder_hook_post
++ make_function_run make_parse_cmd install
++ local function_name function_name_return_code
++ function_name=make_parse_cmd
++ shift
++ type -t make_parse_cmd_hook_pre
++ true
++ make_parse_cmd install
++ local matched=false
++ local deb
++ :
++ case $1 in
++ matched=true
++ make_function_run make_install
++ local function_name function_name_return_code
++ function_name=make_install
++ shift
++ type -t make_install_hook_pre
++ true
++ make_install
++ make_install_=true
++ make_function_run make_helper
++ local function_name function_name_return_code
++ function_name=make_helper
++ shift
++ type -t make_helper_hook_pre
++ true
++ make_helper
++ make_function_run make_get_destdir
++ local function_name function_name_return_code
++ function_name=make_get_destdir
++ shift
++ type -t make_get_destdir_hook_pre
++ true
++ make_get_destdir
++ '[' /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/pin-debian-main = '' ']'
++ type -t make_hook_at_the_end_of_get_destdir
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_get_destdir_hook_post
++ '[' -n '' ']'
++ make_folder_list_for_un_and_install='bin boot dev etc home lib opt sbin srv sys usr var'
++ shopt -s globstar dotglob nullglob
++ local d source_file file_without_pwd file_with_destdir
++ for d in $make_folder_list_for_un_and_install
++ '[' -d bin ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d boot ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d dev ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d etc ']'
++ for source_file in "$PWD/$d"/**
++ '[' true = true ']'
++ '[' '!' -d /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/pin-debian-main ']'
++ cp -R etc /home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main/debian/pin-debian-main
++ break
++ for d in $make_folder_list_for_un_and_install
++ '[' -d home ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d lib ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d opt ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d sbin ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d srv ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d sys ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d usr ']'
++ for d in $make_folder_list_for_un_and_install
++ '[' -d var ']'
++ shopt -u globstar dotglob nullglob
++ '[' '' = true ']'
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_helper_hook_post
++ function_name_return_code=0
++ '[' '!' 0 = 0 ']'
++ type -t make_install_hook_post
++ exit 0
+make[1]: Leaving directory '/home/idk/local-manifest/crypto-manifest/i2p-manifest/pin-debian-main'
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'pin-debian-main' in '../pin-debian-main_0.1_all.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../pin-debian-main_0.1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
+Now running lintian pin-debian-main_0.1_amd64.changes ...
+E: pin-debian-main: package-installs-apt-preferences etc/apt/preferences.d/use-debian-i2p-i2pd
+Finished running lintian.

@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Wed, 23 Jan 2019 01:06:28 -0500
+Source: pin-debian-main
+Binary: pin-debian-main
+Architecture: source all
+Version: 0.1
+Distribution: unstable
+Urgency: medium
+Maintainer: eyedeekay <hankhill19580@gmail.com>
+Changed-By: eyedeekay <hankhill19580@gmail.com>
+Description:
+ pin-debian-main - Forces the installation of i2p packages from Debian.
+Changes:
+ pin-debian-main (0.1) unstable; urgency=medium
+ .
+   * Initial Release.
+Checksums-Sha1:
+ 23c0a051de07142693074484a70b45fed78b5f2f 716 pin-debian-main_0.1.dsc
+ b80f290031e1c458f61d29e02cf3ab28859076f7 18748 pin-debian-main_0.1.tar.xz
+ f1627d2ad202f514c9837b85ba5f178038d9a92e 2632 pin-debian-main_0.1_all.deb
+ a2549bc0347f3a87b904a7c40eb5961fafaad408 5871 pin-debian-main_0.1_amd64.buildinfo
+Checksums-Sha256:
+ 3f28f690a97b44e437fcc7c87cf50f672f5cdcb2118432c94379709e20b5d7bb 716 pin-debian-main_0.1.dsc
+ 234dfa04bc76c2e8fdcf08f238be9b682bba4eebce72b0f14b1b509589a10951 18748 pin-debian-main_0.1.tar.xz
+ 6359e2ab2d58b16e6da5f0479ad27140327bd2323b193db9bb909ed3a3b857dd 2632 pin-debian-main_0.1_all.deb
+ 430789e37c8da901b6a9f8bdb829ef7d2dd254ae739e4dd29d69c59b78db12c4 5871 pin-debian-main_0.1_amd64.buildinfo
+Files:
+ a23b7d06618a5abbb686b6b0787aeac1 716 net optional pin-debian-main_0.1.dsc
+ cb4979115afaf8b41546f5534a5484a7 18748 net optional pin-debian-main_0.1.tar.xz
+ 99411d94f89bc34efc432bb24e37516e 2632 net optional pin-debian-main_0.1_all.deb
+ c33d29e289e4fafa2f4ca6309eef3808 5871 net optional pin-debian-main_0.1_amd64.buildinfo

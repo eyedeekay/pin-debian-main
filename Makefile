@@ -67,6 +67,12 @@ gothub-current: gothub-delete-current
 docker:
 	docker build -t eyedeekay/pin-debian-main .
 
+test:
+	docker build -f Dockerfile.test -t eyedeekay/pin-debian-main .
+
 echo:
 	gpg -n --import --import-options import-show my-key.asc
 	gpg -n --import --import-options import-show i2p-debian-repo.key.asc
+
+copy:
+	cp ../$(NAME)*.* ./

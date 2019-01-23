@@ -1,1 +1,4 @@
 README.md.asc
+*.tar.gz
+*.tar.xz
+*.deb
